@@ -1,22 +1,29 @@
 import React from 'react';
 
-export function Thought(props) {
-  const { thought, removeThought } = props;
-
-  const handleRemoveClick = () => {
-    removeThought(thought.id);
-  };
-
+export const Thought = ({ thought, removeThought, saveThought }) => {
   return (
     <li className="Thought">
+      <span className="text">{thought.text}</span>
       <button
-        aria-label="Remove thought"
         className="remove-button"
-        onClick={handleRemoveClick}
+        onClick={() => removeThought(thought.id)}
       >
-        &times;
+        ✖
       </button>
-      <div className="text">{thought.text}</div>
+      
+      {!thought.isSaved && (
+        <button
+          className="save-button"
+          onClick={() => saveThought(thought.id)}
+        >
+          Conserver
+        </button>
+      )}
+
+      {thought.isSaved && (
+        <span className="saved-label"></span>
+      )}
     </li>
   );
-}
+};
+
