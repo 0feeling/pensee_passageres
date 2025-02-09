@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { AddThoughtForm } from './AddThoughtForm';
-import { Thought } from './Thought';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { AddThoughtForm } from "./AddThoughtForm";
+import { Thought } from "./Thought";
+import DownloadSavedThoughts from "./DownloadSavedThoughts";
+import "./App.css";
 
 export default function App() {
   const [thoughts, setThoughts] = useState([]);
@@ -30,13 +31,14 @@ export default function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setThoughts((prevThoughts) =>
-        prevThoughts.filter((thought) => thought.isSaved || thought.expiresAt > Date.now())
+        prevThoughts.filter(
+          (thought) => thought.isSaved || thought.expiresAt > Date.now()
+        )
       );
     }, 1000);
-  
+
     return () => clearInterval(interval);
   }, []);
-  
 
   const savedThoughts = thoughts.filter((thought) => thought.isSaved);
   const passingThoughts = thoughts.filter((thought) => !thought.isSaved);
@@ -76,6 +78,7 @@ export default function App() {
                 />
               ))}
             </ul>
+            <DownloadSavedThoughts savedThoughts={savedThoughts} />
           </div>
         </div>
       </main>

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { generateId, getNewExpirationTime } from './utils/Utilities';
+import React, { useState } from "react";
+import { generateId, getNewExpirationTime } from "./utils/Utilities";
 
 export function AddThoughtForm({ addThought }) {
-  const [text, setText] = useState('');
+  const [content, setText] = useState("");
 
-  const handleTextChange = (event) => {
+  const handlecontentChange = (event) => {
     setText(event.target.value);
   };
 
@@ -13,13 +13,13 @@ export function AddThoughtForm({ addThought }) {
 
     const newThought = {
       id: generateId(),
-      text: text,
+      content: content,
       expiresAt: getNewExpirationTime(),
-      isSaved: false,
+      isSaved: false
     };
 
     addThought(newThought);
-    setText('');
+    setText("");
   };
 
   return (
@@ -28,8 +28,8 @@ export function AddThoughtForm({ addThought }) {
         type="text"
         aria-label="What's on your mind?"
         placeholder="Libérez votre Esprit. Ici, écrivez vos Pensées"
-        value={text}
-        onChange={handleTextChange}
+        value={content}
+        onChange={handlecontentChange}
       />
       <input type="submit" value="Ajoutez" />
     </form>
