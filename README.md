@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+Pensées Passagères
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Description:
 
-In the project directory, you can run:
+Le projet Pensées Passagères est une application web qui permet aux utilisateurs d'ajouter, de conserver et de supprimer des pensées. L'application propose également une fonctionnalité pour télécharger les pensées conservées sous forme de fichier .txt. Les pensées sont soit "passagères" (qui disparaissent après un certain temps), soit "gardées" (qui peuvent être conservées indéfiniment).
 
-### `npm start`
+L'interface est simple et intuitive, avec un formulaire pour ajouter des pensées et des boutons pour les gérer. Le but de ce projet est de créer un espace où les utilisateurs peuvent rapidement écrire et sauvegarder des pensées qui leur viennent à l'esprit.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Fonctionnalités:
 
-### `npm test`
+Ajouter une pensée : Permet à l'utilisateur de saisir une pensée et de l'ajouter à la liste des pensées passagères.
+Conserver une pensée : Permet de marquer une pensée comme "gardée", ce qui l'ajoute à la liste des pensées conservées.
+Supprimer une pensée : Permet de supprimer une pensée des listes passagères ou gardées.
+Télécharger les pensées gardées : Permet de télécharger un fichier .txt contenant toutes les pensées gardées.
+Technologies utilisées
+React : Pour la création des composants et la gestion de l'état.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Structure du projet:
+Voici un aperçu de la structure des fichiers du projet :
 
-### `npm run build`
+/Pensées-Passagères
+  ├── /public
+  ├── /src
+  │   ├── /components
+  │   │   ├── AddThoughtForm.js  # Composant pour ajouter une nouvelle pensée
+  │   │   ├── Thought.js         # Composant pour afficher une pensée
+  │   │   └── DownloadSavedThoughts.js  # Composant pour télécharger les pensées gardées
+  │   ├── App.js                 # Composant principal
+  │   └── App.css                # Styles CSS de l'application
+  └── package.json               # Dépendances et configuration du projet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  Installation:
+  
+1. Cloner le projet
+Clonez le projet depuis GitHub en utilisant la commande suivante :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bash
+Copier
+Modifier
+git clone https://github.com/ton-compte/Pensees-Passageres.git
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Installer les dépendances
+Accédez au dossier du projet et installez les dépendances avec npm :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Copier
+Modifier
+cd Pensees-Passageres
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Démarrer l'application
+Une fois les dépendances installées, vous pouvez démarrer l'application en utilisant la commande suivante:
 
-## Learn More
+bash
+Copier
+Modifier
+npm start
+Cela ouvrira l'application dans votre navigateur à l'adresse http://localhost:3000.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Comment ça marche ?
 
-### Code Splitting
+Ajout d'une pensée:
+L'utilisateur peut saisir une pensée dans le champ de texte et cliquer sur "Ajoutez" pour l'ajouter à la liste des pensées passagères.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Sauvegarde d'une pensée:
+Une fois qu'une pensée est ajoutée, elle peut être marquée comme "gardée" en cliquant sur le bouton "Conserver". Les pensées gardées sont transférées dans la section des pensées gardées.
 
-### Analyzing the Bundle Size
+Suppression d'une pensée:
+Les pensées, qu'elles soient passagères ou gardées, peuvent être supprimées en cliquant sur le bouton ✖ associé à chaque pensée.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Téléchargement des pensées gardées:
+Les pensées gardées peuvent être téléchargées en cliquant sur le bouton "Télécharger les pensées gardées". Cela génère un fichier .txt contenant l'ID et le contenu de chaque pensée gardée.
 
-### Making a Progressive Web App
+Auteurs:
+Timothée MEUNIER
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+License:
+Ce projet est sous la licence MIT - voir le fichier LICENSE pour plus de détails.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+useState et useEffect : Utilisés pour gérer les états de l'application et pour effectuer des actions périodiques, comme la suppression automatique des pensées passagères expirées.
+CSS : Pour le style de l'application.
