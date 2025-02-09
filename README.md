@@ -11,10 +11,15 @@ L'interface est simple et intuitive, avec un formulaire pour ajouter des pensée
 Fonctionnalités:
 
 Ajouter une pensée : Permet à l'utilisateur de saisir une pensée et de l'ajouter à la liste des pensées passagères.
+
 Conserver une pensée : Permet de marquer une pensée comme "gardée", ce qui l'ajoute à la liste des pensées conservées.
+
 Supprimer une pensée : Permet de supprimer une pensée des listes passagères ou gardées.
+
 Télécharger les pensées gardées : Permet de télécharger un fichier .txt contenant toutes les pensées gardées.
-Technologies utilisées
+
+
+Technologies utilisées:
 React : Pour la création des composants et la gestion de l'état.
 
 Structure du projet:
@@ -37,18 +42,12 @@ Voici un aperçu de la structure des fichiers du projet :
 1. Cloner le projet
 Clonez le projet depuis GitHub en utilisant la commande suivante :
 
-bash
-Copier
-Modifier
 git clone https://github.com/ton-compte/Pensees-Passageres.git
 
 
 2. Installer les dépendances
 Accédez au dossier du projet et installez les dépendances avec npm :
 
-bash
-Copier
-Modifier
 cd Pensees-Passageres
 npm install
 
@@ -56,10 +55,8 @@ npm install
 3. Démarrer l'application
 Une fois les dépendances installées, vous pouvez démarrer l'application en utilisant la commande suivante:
 
-bash
-Copier
-Modifier
 npm start
+
 Cela ouvrira l'application dans votre navigateur à l'adresse http://localhost:3000.
 
 
